@@ -55,4 +55,11 @@ export const hikingImages = [
     desc: 'Early morning hike through the misty mountains',
     tags: ['mountain', 'south America', 'adventure'],
   },
+  {
+    id: 9,
+    src: '/images/hike6.jpg',
+    title: 'Crew hiking together',
+    desc: '',
+    tags: ['Sun', 'sunset', 'adventure'],
+  },
 ];
