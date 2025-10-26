@@ -39,12 +39,12 @@ const Modal = ({ isOpen, onClose, children, className }: ModalProps) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.25 }}
-            onClick={(e) => e.stopPropagation()} // جلوگیری از بسته شدن با کلیک روی داخل
+            onClick={(e) => e.stopPropagation()}
             className={`relative bg-white dark:bg-gray-900 rounded-2xl p-4 shadow-xl ${className}`}
           >
             <button
               onClick={onClose}
-              className="absolute top-3 right-3 text-gray-600 dark:text-gray-300 text-xl hover:scale-110 transition-transform"
+              className="absolute cursor-pointer top-3 right-3 text-gray-600 dark:text-gray-300 text-xl hover:scale-110 transition-transform"
             >
               ✕
             </button>
