@@ -1,0 +1,58 @@
+export const hikingImages = [
+  {
+    id: 1,
+    src: '/images/hike1.jpg',
+    title: 'Hikers on W trek',
+    desc: 'Early morning hike through the misty mountains',
+    tags: ['mountain', 'south America', 'adventure'],
+  },
+  {
+    id: 2,
+    src: '/images/hike2.jpg',
+    title: 'Forest Path',
+    desc: 'A quiet walk through the pine forest',
+    tags: ['Hiking', 'Travel', 'Path'],
+  },
+  {
+    id: 3,
+    src: '/images/hike3.jpg',
+    title: 'Rocky View',
+    desc: 'Standing on the edge of a rocky cliff',
+    tags: ['Sunrise', 'Hike', 'Pack'],
+  },
+  {
+    id: 4,
+    src: '/images/hike4.jpg',
+    title: 'Backpacker on a high ledge',
+    desc: 'A backpacker enjoying the view from a high ledge',
+    tags: ['Cliff', 'Mount', 'Travel'],
+  },
+  {
+    id: 5,
+    src: '/images/hike5.jpg',
+    title: 'View from the top',
+    desc: 'A breathtaking view from the summit',
+    tags: ['Summit', 'View', 'Travel'],
+  },
+  {
+    id: 6,
+    src: '/images/hike4.jpg',
+    title: 'Backpacker on a high ledge',
+    desc: 'A backpacker enjoying the view from a high ledge',
+    tags: ['Cliff', 'Mount', 'Travel'],
+  },
+  {
+    id: 7,
+    src: '/images/hike2.jpg',
+    title: 'Forest Path',
+    desc: 'A quiet walk through the pine forest',
+    tags: ['Hiking', 'Travel', 'Path'],
+  },
+  {
+    id: 8,
+    src: '/images/hike1.jpg',
+    title: 'Hikers on W trek',
+    desc: 'Early morning hike through the misty mountains',
+    tags: ['mountain', 'south America', 'adventure'],
+  },
+];
