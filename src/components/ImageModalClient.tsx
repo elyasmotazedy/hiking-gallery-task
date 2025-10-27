@@ -1,6 +1,6 @@
 'use client';
 
-import Modal from '@/components/ui/Modal';
+import Modal from '@/components/Modal';
 import { hikingImages } from '@/lib/images';
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -14,7 +14,7 @@ export default function ImageModalClient({ id }: { id: number }) {
   useEffect(() => {
     if (!open) router.back();
   }, [open, router]);
-
+  
   if (!img) return null;
 
   return (
