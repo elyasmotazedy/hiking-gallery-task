@@ -14,7 +14,10 @@ export default function ImageModalClient({ id }: { id: number }) {
   useEffect(() => {
     if (!open) router.back();
   }, [open, router]);
-
+  console.log('[DBG] ImageModalClient loaded for id:', id);
+  useEffect(() => {
+    console.log('[DBG] ImageModalClient mounted');
+  }, []);
   if (!img) return null;
 
   return (

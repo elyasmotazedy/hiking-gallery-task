@@ -1,10 +1,13 @@
-'use client';
-
 import { Geist, Geist_Mono } from 'next/font/google';
 import './globals.css';
 import Nav from '@/components/Nav';
-import { usePathname } from 'next/navigation';
 import ThemeProviderWrapper from '@/components/theme-provider';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Gallery App',
+  description: 'A beautiful gallery app',
+};
 
 const geistSans = Geist({
   variable: '--font-geist-sans',
@@ -15,7 +18,7 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
-
+console.log('[DBG] ClientLayoutWrapper render');
 export default function RootLayout({
   children,
   modal,
@@ -23,9 +26,6 @@ export default function RootLayout({
   children: React.ReactNode;
   modal: React.ReactNode;
 }>) {
-  const pathname = usePathname();
-  const isDirectPage = /^\/\d+$/.test(pathname);
-
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -34,7 +34,7 @@ export default function RootLayout({
         <ThemeProviderWrapper>
           <Nav />
           {children}
-          {!isDirectPage && modal}
+          {modal}
         </ThemeProviderWrapper>
       </body>
     </html>
