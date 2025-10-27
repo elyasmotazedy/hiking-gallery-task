@@ -1,9 +1,9 @@
 import { Geist, Geist_Mono } from 'next/font/google';
-import './globals.css';
 import Nav from '@/components/Nav';
-import ThemeProviderWrapper from '@/components/theme-provider';
 import { Metadata } from 'next';
 import { FC, ReactNode } from 'react';
+import Providers from './providers';
+import './globals.css';
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -31,10 +31,10 @@ const RootLayout: FC<RootLayoutProps> = ({ children }) => {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-gray-900`}
       >
-        <ThemeProviderWrapper>
+        <Providers>
           <Nav />
           {children}
-        </ThemeProviderWrapper>
+        </Providers>
       </body>
     </html>
   );

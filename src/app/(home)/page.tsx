@@ -1,4 +1,3 @@
-'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import { hikingImages } from '@/lib/images';
@@ -17,6 +16,7 @@ const Home = () => {
                 width={600}
                 height={400}
                 className="rounded-xl object-cover hover:scale-105 transition-transform duration-300"
+                priority
               />
             </Link>
           </div>
