@@ -62,4 +62,33 @@ export const hikingImages = [
     desc: '',
     tags: ['Sun', 'sunset', 'adventure'],
   },
+  {
+    id: 10,
+    src: '/images/hike7.jpg',
+    title:
+      'Summit to Cântaro Gordo, Serra da Estrela - Portugal 2 days unsupported backpacking in Serra da Estrela',
+    desc: '',
+    tags: ['Sun', 'sunset', 'adventure'],
+  },
+  {
+    id: 11,
+    src: '/images/hike8.jpg',
+    title: 'on the day before my wedding with my friends at “Mittag”',
+    desc: '',
+    tags: ['Sun', 'sunset', 'adventure'],
+  },
+  {
+    id: 12,
+    src: '/images/hike9.jpg',
+    title: 'mountain like whilst hiking through the alps',
+    desc: 'Early morning hike through the misty mountains',
+    tags: ['Hiking', 'Travel', 'Path'],
+  },
+  {
+    id: 13,
+    src: '/images/hike10.jpg',
+    title: 'mountain like whilst hiking through the alps',
+    desc: 'Early morning hike through the misty mountains',
+    tags: ['Sun', 'sunset', 'adventure'],
+  },
 ];
