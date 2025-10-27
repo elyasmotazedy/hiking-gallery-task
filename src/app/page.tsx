@@ -10,7 +10,7 @@ const Home = () => {
       <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 p-4">
         {hikingImages.map((img) => (
           <div key={img.id} className="mb-4 break-inside-avoid cursor-pointer">
-            <Link href={`/gallery/${img.id}`} scroll={false}>
+            <Link href={`/${img.id}`} scroll={false}>
               <Image
                 src={img.src}
                 alt={img.title}
