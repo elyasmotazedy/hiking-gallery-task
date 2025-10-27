@@ -3,6 +3,12 @@ import './globals.css';
 import Nav from '@/components/Nav';
 import ThemeProviderWrapper from '@/components/theme-provider';
 import { Metadata } from 'next';
+import { FC, ReactNode } from 'react';
+
+interface RootLayoutProps {
+  children: ReactNode;
+  modal: ReactNode;
+}
 
 export const metadata: Metadata = {
   title: 'Gallery App',
@@ -18,14 +24,8 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
   subsets: ['latin'],
 });
-console.log('[DBG] ClientLayoutWrapper render');
-export default function RootLayout({
-  children,
-  modal,
-}: Readonly<{
-  children: React.ReactNode;
-  modal: React.ReactNode;
-}>) {
+
+const RootLayout: FC<RootLayoutProps> = ({ children }) => {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -34,9 +34,10 @@ export default function RootLayout({
         <ThemeProviderWrapper>
           <Nav />
           {children}
-          {modal}
         </ThemeProviderWrapper>
       </body>
     </html>
   );
-}
+};
+
+export default RootLayout;

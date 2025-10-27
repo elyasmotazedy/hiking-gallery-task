@@ -1,7 +1,12 @@
 import Image from 'next/image';
 import { hikingImages } from '@/lib/images';
+import { FC } from 'react';
 
-export default async function GalleryImagePage({ params }: { params: Promise<{ id: number }> }) {
+interface GalleryImagePageProps {
+  params: Promise<{ id: number }>;
+}
+
+const GalleryImagePage: FC<GalleryImagePageProps> = async ({ params }) => {
   const { id } = await params;
   const image = hikingImages.find((i) => i.id === +id);
   if (!image) return null;
@@ -22,4 +27,6 @@ export default async function GalleryImagePage({ params }: { params: Promise<{ i
       </p>
     </main>
   );
-}
+};
+
+export default GalleryImagePage;
