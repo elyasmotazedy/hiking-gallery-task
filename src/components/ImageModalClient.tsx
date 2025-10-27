@@ -14,16 +14,16 @@ export default function ImageModalClient({ id }: { id: number }) {
   useEffect(() => {
     if (!open) router.back();
   }, [open, router]);
-  
+
   if (!img) return null;
 
   return (
     <Modal
       isOpen={open}
       onClose={() => setOpen(false)}
-      className="max-w-2xl w-full  overflow-auto max-h-[98vh]"
+      className="max-w-2xl w-full  overflow-auto max-h-[98vh] "
     >
-      <div className="max-w-full max-h-full overflow-auto">
+      <div className="max-w-full max-h-full overflow-auto ">
         <Image
           src={img.src}
           alt={img.title || 'Hiking Image'}
@@ -33,8 +33,8 @@ export default function ImageModalClient({ id }: { id: number }) {
         />
       </div>
       <h2 className="text-lg font-semibold">{img.title}</h2>
-      <p className="text-sm text-gray-600 dark:text-gray-400">{img.desc}</p>
-      <p className="text-sm text-gray-600 dark:text-gray-400">
+      <p className="text-sm ">{img.desc}</p>
+      <p className="text-sm ">
         <span>Tags:</span>{' '}
         {img.tags.map((tag, index) => (
           <span className="text-xs" key={index}>

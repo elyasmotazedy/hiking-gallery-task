@@ -1,7 +1,7 @@
 'use client';
 
 import { motion, AnimatePresence } from 'framer-motion';
-import { ReactNode, useEffect } from 'react';
+import { FC, ReactNode, useEffect } from 'react';
 import { createPortal } from 'react-dom';
 
 interface ModalProps {
@@ -11,15 +11,24 @@ interface ModalProps {
   className?: string;
 }
 
-const Modal = ({ isOpen, onClose, children, className }: ModalProps) => {
+const Modal: FC<ModalProps> = ({ isOpen, onClose, children, className = '' }) => {
   useEffect(() => {
-    if (isOpen) document.body.style.overflow = 'hidden';
-    else document.body.style.overflow = 'auto';
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+      // اضافه کردن کلاس dark به html اگر وجود ندارد
+      if (!document.documentElement.classList.contains('dark')) {
+        document.documentElement.classList.add('dark');
+      }
+    } else {
+      document.body.style.overflow = 'auto';
+    }
+
     return () => {
       document.body.style.overflow = 'auto';
     };
   }, [isOpen]);
 
+  // برای جلوگیری از hydration mismatch
   if (typeof window === 'undefined') return null;
 
   return createPortal(
@@ -40,7 +49,19 @@ const Modal = ({ isOpen, onClose, children, className }: ModalProps) => {
             exit={{ scale: 0.95, opacity: 0 }}
             transition={{ duration: 0.25 }}
             onClick={(e) => e.stopPropagation()}
-            className={`relative bg-white dark:bg-gray-900 rounded-2xl p-4 shadow-xl ${className}`}
+            className={`
+              relative 
+              bg-white 
+              dark:bg-gray-900 
+              text-gray-900 
+              dark:text-white
+              rounded-2xl 
+              p-4 
+              shadow-xl 
+              border border-gray-200 
+              dark:border-gray-700
+              ${className}
+            `}
           >
             <button
               onClick={onClose}

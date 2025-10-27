@@ -12,11 +12,11 @@ const GalleryImagePage: FC<GalleryImagePageProps> = async ({ params }) => {
   if (!image) return null;
 
   return (
-    <main className="min-h-screen flex flex-col items-center justify-center bg-white dark:bg-gray-900 text-gray-800 dark:text-gray-100 p-8">
+    <main className="min-h-screen flex flex-col items-center justify-center  p-8">
       <Image src={image.src} alt={image.title} width={900} height={600} className="rounded-xl" />
       <h2 className="text-2xl font-semibold mt-4">{image.title}</h2>
-      <p className="text-sm text-gray-600 dark:text-gray-400 mt-2">{image.desc}</p>
-      <p className="text-sm text-gray-600 dark:text-gray-400">
+      <p className="text-sm  mt-2">{image.desc}</p>
+      <p className="text-sm ">
         <span>Tags:</span>{' '}
         {image.tags.map((tag, index) => (
           <span className="text-xs" key={index}>
